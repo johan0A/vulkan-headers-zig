@@ -5,8 +5,8 @@ pub fn build(b: *std.Build) void {
     const include = vulkan_headers_dep.path("include");
 
     const headers = b.addWriteFiles();
-    inline for (.{ "vk_video", "vulkan" }) |subdir| {
-        _ = headers.addCopyDirectory(include.path(b, "include/" ++ subdir), subdir, .{});
+    for ([_][]const u8{ "vk_video", "vulkan" }) |subdir| {
+        _ = headers.addCopyDirectory(include.path(b, subdir), subdir, .{});
     }
 
     b.addNamedLazyPath("vulkan-headers", headers.getDirectory());
