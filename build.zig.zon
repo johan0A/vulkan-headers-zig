@@ -1,0 +1,17 @@
+.{
+    .name = .vulkan_headers,
+    .version = "0.1.0+1.4.326",
+    .fingerprint = 0x768d3abfd688f420, // Changing this has security and trust implications.
+    .minimum_zig_version = "0.14.0",
+    .dependencies = .{
+        .vulkan_headers = .{
+            .url = "git+https://github.com/KhronosGroup/Vulkan-Headers?ref=v1.4.326#d1cd37e925510a167d4abef39340dbdea47d8989",
+            .hash = "N-V-__8AAESg9gHKzlANbo03d4Fcb5m_5aZXJXIhYbWzCe4G",
+        },
+    },
+    .paths = .{
+        "LICENSES",
+        "build.zig",
+        "build.zig.zon",
+    },
+}
